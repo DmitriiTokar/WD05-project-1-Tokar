@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - var title = 'Навигация - Документация';
+    - var pageClass = 'body--dashboard dark-bg';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Навигация #{time}
+
+            .section-ui
+                include ../../sections/header-nav.pug
+
+            pre.
+                include ../../sections/header-nav.pug
+
+            .title header-nav.pug
+            pre.
+                nav.nav
+                    +nav-link('Европа', '#!')
+                    +nav-link('Азия', '#!')
+                    +nav-link('Острова', '#!')
+                    +nav-link('Америка', '#!')
+                    +nav-link('Африка', '#!')

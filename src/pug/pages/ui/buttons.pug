@@ -8,14 +8,28 @@ block content
 	.main-wrapper
 		.container.container--left.user-content.pt-35
 			h1 Кнопки
-			
+
 			.section-ui
-				+button('Текст кнопки', '#!')
+				+button('Предыдущий пост')
+
+			.section-ui
+				+buttonPrimary('Опубликовать')
+
 			pre.
-				+button('Текст кнопки', '#!')
+				+button('Предыдущий пост')
+				+buttonPrimary('Опубликовать')
 			
 			.title mixins/_buttons.pug
 			pre.
 				mixin button(text, link)
-					a(class="button" href= link)&attributes(attributes) #{text}
+					if link
+						a(class="button" href= link)&attributes(attributes) #{text}
+					else
+						a(class="button" href='#!')&attributes(attributes) #{text}
+
+				mixin buttonPrimary(text, link)
+					if link
+						a(class="button button--primary" href= link)&attributes(attributes) #{text}
+					else
+						a(class="button button--primary" href='#!')&attributes(attributes) #{text}
 

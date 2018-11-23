@@ -1,0 +1,22 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+    - var title = 'Подвал - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+    .main-wrapper
+        .container.container--left.user-content.pt-35
+            h1 Подвал #{time}
+
+            .section-ui
+                include ../../sections/footer.pug
+
+            pre.
+                include ../../sections/footer.pug
+
+            .title footer.pug
+            pre.
+                footer.footer
+                                p Юрий Ключевский
+                                p Сверстано на курсе в WebCademy.ru в 2018 году
